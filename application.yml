@@ -1,0 +1,17 @@
+# Bu sozlamalar barcha servislarga tegishli
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka
+  instance:
+    prefer-ip-address: true
+
+spring:
+  rabbitmq:
+    host: rabbitmq
+    
+# Misol uchun, barcha servislar uchun standart loglash darajasi
+# logging:
+  # level:
+    # root: INFO
+    # com.example.cinemasphere: DEBUG 
