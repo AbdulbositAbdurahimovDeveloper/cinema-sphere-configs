@@ -4,13 +4,17 @@ server:
 spring:
   datasource:
     url: jdbc:postgresql://cinema-db:5432/movie_db
-    username: user
-    password: password
+    username: postgres
+    password: 1234
   jpa:
     hibernate:
       ddl-auto: update
 
 eureka:
   client:
-    serviceUrl:
-      defaultZone: http://eureka-server:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
